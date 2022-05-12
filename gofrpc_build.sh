@@ -2,7 +2,7 @@
 
 [ $# -lt 1 ] && {
     echo "usage: $0 arch";
-    echo -e "\tsupport list: monaco rtd1296 x64";
+    echo -e "\tsupport list: monaco rtd1296 apollolake";
     #exit 1;
 }
 
@@ -12,8 +12,8 @@ CURPATH="$(pwd)"
 
 APPNAME="gofrpc"
 
-PLATVER="6.0"
-PLATFORM="${1:-x64}"
+PLATVER="7.0"
+PLATFORM="${1:-apollolake}"
 
 ### 实际编译环境 工程目录
 APPBUILDPATH="${CURPATH}/build_env/ds.${PLATFORM}-${PLATVER}/source"
@@ -39,7 +39,7 @@ rm -rf ${REALBUILDPATH}/*
 ## build
 rm -rf ${BUILDOUTPATH}/${APPNAME}*.spk
 cd ${BUILDTOOLPATH}
-python3 PkgCreate.py -v ${PLATVER} -p ${PLATFORM} -c ${APPNAME} #--print-log
+./PkgCreate.py -v ${PLATVER} -p apollolake -c ${APPNAME} #--print-log
 
 # list
 ls -lhrt ${BUILDOUTPATH}/
