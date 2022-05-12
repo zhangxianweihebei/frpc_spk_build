@@ -39,7 +39,7 @@ rm -rf ${REALBUILDPATH}/*
 ## build
 rm -rf ${BUILDOUTPATH}/${APPNAME}*.spk
 cd ${BUILDTOOLPATH}
-./PkgCreate.py -v ${PLATVER} -p ${PLATFORM} -c ${APPNAME} #--print-log
+./PkgCreate.py -v ${PLATVER} -p apollolake -c ${APPNAME} #--print-log
 
 # list
 ls -lhrt ${BUILDOUTPATH}/
