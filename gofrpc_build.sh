@@ -12,7 +12,7 @@ CURPATH="$(pwd)"
 
 APPNAME="gofrpc"
 
-PLATVER="6.0"
+PLATVER="7.0"
 PLATFORM="${1:-x64}"
 
 ### 实际编译环境 工程目录
